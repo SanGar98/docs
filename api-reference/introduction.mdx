@@ -1,0 +1,129 @@
+---
+title: 'API Reference'
+description: 'Complete API reference documentation'
+---
+
+## Welcome to the API Reference
+
+This section provides comprehensive documentation for all API endpoints, authentication methods, and integration guides.
+
+<Card title="Getting Started with the API" icon="rocket" href="/api-reference/introduction">
+  Learn how to authenticate and make your first API call
+</Card>
+
+## Available Endpoints
+
+<CardGroup cols={2}>
+  <Card
+    title="GET Endpoint"
+    icon="arrow-down"
+    href="/api-reference/endpoint/get"
+  >
+    Retrieve data from the API
+  </Card>
+  <Card
+    title="POST Endpoint"
+    icon="plus"
+    href="/api-reference/endpoint/create"
+  >
+    Create new resources
+  </Card>
+  <Card
+    title="PUT/PATCH Endpoint"
+    icon="pen"
+    href="/api-reference/endpoint/update"
+  >
+    Update existing resources
+  </Card>
+  <Card
+    title="DELETE Endpoint"
+    icon="trash"
+    href="/api-reference/endpoint/delete"
+  >
+    Delete resources
+  </Card>
+</CardGroup>
+
+## Authentication
+
+All API requests require authentication using an API key:
+
+```bash
+curl https://api.example.com/v1/resource \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+## Base URL
+
+```
+https://api.example.com/v1
+```
+
+## Response Format
+
+All responses are returned in JSON format:
+
+```json
+{
+  "success": true,
+  "data": {
+    "id": "123",
+    "name": "Example"
+  },
+  "message": "Success"
+}
+```
+
+## Error Handling
+
+Error responses include a status code and message:
+
+```json
+{
+  "success": false,
+  "error": {
+    "code": "invalid_request",
+    "message": "The request was invalid"
+  }
+}
+```
+
+## Rate Limiting
+
+<Info>
+  Rate limits: 1000 requests per hour for authenticated users
+</Info>
+
+## SDKs and Libraries
+
+<CardGroup cols={3}>
+  <Card title="JavaScript" icon="js">
+    ```bash
+    npm install @example/sdk
+    ```
+  </Card>
+  <Card title="Python" icon="python">
+    ```bash
+    pip install example-sdk
+    ```
+  </Card>
+  <Card title="Go" icon="golang">
+    ```bash
+    go get github.com/example/sdk
+    ```
+  </Card>
+</CardGroup>
+
+## Need Help?
+
+<AccordionGroup>
+  <Accordion title="API Support" icon="life-ring">
+    Contact our API support team at api-support@example.com
+  </Accordion>
+  <Accordion title="Documentation" icon="book">
+    Browse our comprehensive guides and tutorials
+  </Accordion>
+  <Accordion title="Community" icon="users">
+    Join our developer community for discussions and help
+  </Accordion>
+</AccordionGroup>

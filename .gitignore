@@ -1,0 +1,19 @@
+# Mintlify files
+.mintlify
+node_modules/
+.DS_Store
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

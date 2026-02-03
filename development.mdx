@@ -1,0 +1,93 @@
+---
+title: 'Development'
+description: 'Learn how to set up your development environment'
+---
+
+## Development Environment
+
+Setting up a proper development environment is crucial for efficient documentation development.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+<CardGroup cols={2}>
+  <Card title="Node.js" icon="node-js">
+    Version 14.0 or higher required
+  </Card>
+  <Card title="Git" icon="github">
+    For version control and collaboration
+  </Card>
+</CardGroup>
+
+### Installation Steps
+
+<Steps>
+  <Step title="Install Mintlify CLI">
+    Install the Mintlify CLI globally using npm:
+    ```bash
+    npm install -g mintlify
+    ```
+  </Step>
+  <Step title="Clone Repository">
+    Clone your documentation repository:
+    ```bash
+    git clone https://github.com/SanGar98/docs.git
+    cd docs
+    ```
+  </Step>
+  <Step title="Start Development Server">
+    Run the development server:
+    ```bash
+    mintlify dev
+    ```
+    Your docs will be available at `http://localhost:3000`
+  </Step>
+</Steps>
+
+## Project Structure
+
+Understanding the project structure helps you navigate and organize your documentation effectively:
+
+```
+docs/
+├── mint.json           # Configuration file
+├── introduction.mdx    # Homepage
+├── quickstart.mdx      # Getting started guide
+├── essentials/         # Essential documentation
+│   ├── markdown.mdx
+│   ├── code.mdx
+│   └── ...
+├── api-reference/      # API documentation
+│   └── ...
+└── images/             # Images and assets
+```
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Use Meaningful File Names" icon="file">
+    Name your files descriptively to improve navigation and SEO
+  </Accordion>
+  <Accordion title="Organize Content" icon="folder">
+    Group related documentation in folders for better organization
+  </Accordion>
+  <Accordion title="Write Clear Titles" icon="heading">
+    Use clear, descriptive titles in your frontmatter
+  </Accordion>
+  <Accordion title="Test Locally" icon="flask">
+    Always preview changes locally before pushing to production
+  </Accordion>
+</AccordionGroup>
+
+## Development Workflow
+
+1. **Create a new branch** for your changes
+2. **Make your edits** using your preferred editor
+3. **Preview locally** using `mintlify dev`
+4. **Commit your changes** with descriptive messages
+5. **Push to GitHub** to trigger automatic deployment
+
+<Tip>
+  Use the Mintlify VS Code extension for better syntax highlighting and autocomplete!
+</Tip>
