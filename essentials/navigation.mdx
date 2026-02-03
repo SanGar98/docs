@@ -1,0 +1,195 @@
+---
+title: 'Navigation Setup'
+description: 'Learn how to configure navigation and page structure'
+---
+
+## Navigation Structure
+
+The navigation in Mintlify is configured in the `mint.json` file under the `navigation` key.
+
+## Basic Navigation
+
+Define groups and pages:
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["introduction", "quickstart"]
+    }
+  ]
+}
+```
+
+## Nested Pages
+
+Organize pages in folders:
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Guides",
+      "pages": [
+        "guides/overview",
+        "guides/authentication",
+        "guides/api-keys"
+      ]
+    }
+  ]
+}
+```
+
+## Multiple Groups
+
+Create multiple navigation groups:
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": ["concepts/architecture", "concepts/data-model"]
+    },
+    {
+      "group": "Advanced",
+      "pages": ["advanced/optimization", "advanced/security"]
+    }
+  ]
+}
+```
+
+## Tabs
+
+Create separate sections with tabs:
+
+```json
+{
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Documentation",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api-reference/introduction"]
+    }
+  ]
+}
+```
+
+## Page Organization
+
+### File Structure
+
+Organize your files to match your navigation:
+
+```
+docs/
+├── introduction.mdx
+├── quickstart.mdx
+├── guides/
+│   ├── overview.mdx
+│   ├── authentication.mdx
+│   └── api-keys.mdx
+└── api-reference/
+    ├── introduction.mdx
+    └── endpoints/
+        ├── users.mdx
+        └── posts.mdx
+```
+
+### Page Metadata
+
+Each page should have frontmatter:
+
+```markdown
+---
+title: 'Page Title'
+description: 'Page description for SEO'
+---
+```
+
+## Navigation Best Practices
+
+<AccordionGroup>
+  <Accordion title="Logical Grouping" icon="folder-tree">
+    Group related pages together for easier navigation
+  </Accordion>
+  <Accordion title="Clear Labels" icon="tag">
+    Use clear, descriptive group names and page titles
+  </Accordion>
+  <Accordion title="Shallow Hierarchy" icon="layer-group">
+    Keep navigation hierarchy shallow (2-3 levels max)
+  </Accordion>
+  <Accordion title="Consistent Structure" icon="grip-lines">
+    Maintain consistent structure across all sections
+  </Accordion>
+</AccordionGroup>
+
+## Common Patterns
+
+### Documentation Hub
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Overview",
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Guides",
+      "pages": ["guides/getting-started", "guides/advanced"]
+    },
+    {
+      "group": "Reference",
+      "pages": ["api-reference", "sdk-reference"]
+    }
+  ]
+}
+```
+
+### API Documentation
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Introduction",
+      "pages": ["api-reference/introduction", "api-reference/authentication"]
+    },
+    {
+      "group": "Endpoints",
+      "pages": [
+        "api-reference/endpoints/users",
+        "api-reference/endpoints/posts",
+        "api-reference/endpoints/comments"
+      ]
+    }
+  ]
+}
+```
+
+## Dynamic Navigation
+
+Pages are automatically added to navigation when referenced in `mint.json`. Make sure all files referenced exist in your repository.
+
+<Tip>
+  Test your navigation locally with `mintlify dev` to ensure all links work
+</Tip>
+
+<Warning>
+  Broken links in navigation will cause build errors
+</Warning>

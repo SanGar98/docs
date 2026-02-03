@@ -1,0 +1,195 @@
+---
+title: 'Settings & Configuration'
+description: 'Configure your documentation settings in mint.json'
+---
+
+## mint.json Configuration
+
+The `mint.json` file is the central configuration file for your Mintlify documentation. It controls branding, navigation, and behavior.
+
+## Basic Settings
+
+### Name and Branding
+
+```json
+{
+  "name": "Documentation",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg"
+}
+```
+
+### Colors
+
+Customize your brand colors:
+
+```json
+{
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373",
+    "anchors": {
+      "from": "#0D9373",
+      "to": "#07C983"
+    }
+  }
+}
+```
+
+## Navigation
+
+Define your documentation structure:
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "quickstart"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "guides/authentication",
+        "guides/api-keys"
+      ]
+    }
+  ]
+}
+```
+
+## Tabs
+
+Create multiple sections with tabs:
+
+```json
+{
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    },
+    {
+      "name": "Guides",
+      "url": "guides"
+    }
+  ]
+}
+```
+
+## Topbar
+
+### Topbar Links
+
+```json
+{
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@example.com"
+    }
+  ]
+}
+```
+
+### CTA Button
+
+```json
+{
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://dashboard.example.com"
+  }
+}
+```
+
+## Anchors
+
+Add external links to your navigation:
+
+```json
+{
+  "anchors": [
+    {
+      "name": "Documentation",
+      "icon": "book-open-cover",
+      "url": "https://docs.example.com"
+    },
+    {
+      "name": "Community",
+      "icon": "slack",
+      "url": "https://community.example.com"
+    }
+  ]
+}
+```
+
+## Footer
+
+Configure footer social links:
+
+```json
+{
+  "footerSocials": {
+    "x": "https://x.com/example",
+    "github": "https://github.com/example",
+    "linkedin": "https://www.linkedin.com/company/example"
+  }
+}
+```
+
+## Advanced Settings
+
+### Analytics
+
+Integrate analytics services:
+
+```json
+{
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX"
+    },
+    "gtm": {
+      "tagId": "GTM-XXXXXX"
+    }
+  }
+}
+```
+
+### Search
+
+Configure search behavior:
+
+```json
+{
+  "search": {
+    "prompt": "Search documentation..."
+  }
+}
+```
+
+### Background
+
+Customize the background:
+
+```json
+{
+  "backgroundImage": "/images/background.png"
+}
+```
+
+<Tip>
+  Always validate your `mint.json` file to ensure proper JSON syntax
+</Tip>
+
+<Warning>
+  Changes to `mint.json` require restarting the development server
+</Warning>

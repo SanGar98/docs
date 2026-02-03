@@ -1,0 +1,128 @@
+---
+title: 'Images & Media'
+description: 'Learn how to add images, videos, and other media to your docs'
+---
+
+## Images
+
+### Basic Image
+
+Add images using standard markdown syntax:
+
+```markdown
+![Alt text](/images/example.png)
+```
+
+### Responsive Images
+
+Use Mintlify's image component for responsive images:
+
+```markdown
+<img
+  src="/images/example.png"
+  alt="Example"
+  width="600"
+/>
+```
+
+### Dark Mode Images
+
+Show different images for light and dark modes:
+
+```markdown
+<img
+  className="block dark:hidden"
+  src="/images/hero-light.svg"
+  alt="Hero Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/hero-dark.svg"
+  alt="Hero Dark"
+/>
+```
+
+## Image Organization
+
+Store your images in the `/images` directory:
+
+```
+images/
+├── logo/
+│   ├── dark.svg
+│   └── light.svg
+├── screenshots/
+│   └── dashboard.png
+└── diagrams/
+    └── architecture.svg
+```
+
+## Videos
+
+### Embedded Videos
+
+Embed videos from popular platforms:
+
+```markdown
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+```
+
+### Video Callout
+
+Use the Frame component for better video integration:
+
+<Frame>
+  <img src="https://via.placeholder.com/800x450" alt="Video placeholder" />
+</Frame>
+
+## Diagrams
+
+### Mermaid Diagrams
+
+Create diagrams using Mermaid syntax:
+
+```mermaid
+graph TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Great!]
+    B -->|No| D[Debug]
+    D --> B
+```
+
+## Icons
+
+Use Font Awesome icons in your documentation:
+
+```markdown
+<Icon icon="check" /> Success
+<Icon icon="warning" /> Warning
+<Icon icon="info" /> Information
+```
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Optimize Images" icon="image">
+    - Compress images to reduce file size
+    - Use appropriate formats (SVG for logos, PNG for screenshots)
+    - Keep images under 500KB when possible
+  </Accordion>
+  <Accordion title="Use Alt Text" icon="universal-access">
+    Always provide descriptive alt text for accessibility
+  </Accordion>
+  <Accordion title="Organize Files" icon="folder">
+    Keep images organized in subdirectories by type or section
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Use SVG format for logos and icons for better scalability
+</Tip>

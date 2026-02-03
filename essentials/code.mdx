@@ -1,0 +1,139 @@
+---
+title: 'Code Examples'
+description: 'Learn how to add and format code in your documentation'
+---
+
+## Inline Code
+
+Use single backticks for `inline code` within your text.
+
+```markdown
+Use the `print()` function to display output.
+```
+
+## Code Blocks
+
+Use triple backticks with language specification for syntax highlighting:
+
+### JavaScript
+
+```javascript
+// Function example
+function calculateSum(a, b) {
+  return a + b;
+}
+
+const result = calculateSum(5, 3);
+console.log(result); // Output: 8
+```
+
+### Python
+
+```python
+# Class example
+class Calculator:
+    def add(self, a, b):
+        return a + b
+    
+    def multiply(self, a, b):
+        return a * b
+
+calc = Calculator()
+print(calc.add(5, 3))  # Output: 8
+```
+
+### TypeScript
+
+```typescript
+// Interface example
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+function getUser(id: number): User {
+  return {
+    id: id,
+    name: "John Doe",
+    email: "john@example.com"
+  };
+}
+```
+
+## Code Groups
+
+Show multiple code examples in tabs:
+
+<CodeGroup>
+
+```javascript JavaScript
+const greeting = "Hello, World!";
+console.log(greeting);
+```
+
+```python Python
+greeting = "Hello, World!"
+print(greeting)
+```
+
+```go Go
+package main
+import "fmt"
+
+func main() {
+    greeting := "Hello, World!"
+    fmt.Println(greeting)
+}
+```
+
+</CodeGroup>
+
+## File Names
+
+Add file names to your code blocks:
+
+```bash package.json
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
+```
+
+## Line Highlighting
+
+Highlight specific lines in your code:
+
+```javascript {3-5}
+function processData(data) {
+  // Validate input
+  if (!data || data.length === 0) {
+    throw new Error("Invalid data");
+  }
+  
+  // Process data
+  return data.map(item => item.value);
+}
+```
+
+## Terminal Commands
+
+Show terminal commands with proper formatting:
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+<Tip>
+  Always specify the language for proper syntax highlighting
+</Tip>
