@@ -14,39 +14,6 @@
       "to": "#07C983"
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:support@vortexbird.com"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.vortexbird.com"
-  },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "docs/api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.vortexbird.com"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://vortexbird.slack.com"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://vortexbird.com/blog"
-    }
-  ],
   "navigation": [
     {
       "group": "Get Started",
@@ -97,8 +64,6 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/vortexbird",
-    "github": "https://github.com/vortexbird",
-    "linkedin": "https://www.linkedin.com/company/vortexbird"
+    "Pagina Web": "https://vortexbird.com/"
   }
 }
