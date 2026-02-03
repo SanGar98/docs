@@ -4,7 +4,7 @@
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
@@ -27,7 +27,7 @@
   "tabs": [
     {
       "name": "API Reference",
-      "url": "docs/api-reference"
+      "url": "api-reference"
     }
   ],
   "anchors": [
@@ -51,48 +51,48 @@
     {
       "group": "Get Started",
       "pages": [
-        "docs/introduction",
-        "docs/getting-started/installation",
-        "docs/getting-started/configuration",
-        "docs/getting-started/quick-start"
+        "introduction",
+        "getting-started/installation",
+        "getting-started/configuration",
+        "getting-started/quick-start"
       ]
     },
     {
       "group": "Architecture",
       "pages": [
-        "docs/architecture/overview",
-        "docs/architecture/database-schema",
-        "docs/architecture/security"
+        "architecture/overview",
+        "architecture/database-schema",
+        "architecture/security"
       ]
     },
     {
       "group": "Data Models",
       "pages": [
-        "docs/models/entities",
-        "docs/models/dtos"
+        "models/entities",
+        "models/dtos"
       ]
     },
     {
       "group": "Guides",
       "pages": [
-        "docs/guides/deployment",
-        "docs/guides/testing",
-        "docs/guides/error-handling",
-        "docs/guides/reports"
+        "guides/deployment",
+        "guides/testing",
+        "guides/error-handling",
+        "guides/reports"
       ]
     },
     {
       "group": "API Documentation",
       "pages": [
-        "docs/api-reference/authentication",
-        "docs/api-reference/registro-control",
-        "docs/api-reference/proyecto",
-        "docs/api-reference/desarrollador",
-        "docs/api-reference/empresa",
-        "docs/api-reference/bolsa-horas",
-        "docs/api-reference/archivo",
-        "docs/api-reference/estado",
-        "docs/api-reference/historial"
+        "api-reference/authentication",
+        "api-reference/registro-control",
+        "api-reference/proyecto",
+        "api-reference/desarrollador",
+        "api-reference/empresa",
+        "api-reference/bolsa-horas",
+        "api-reference/archivo",
+        "api-reference/estado",
+        "api-reference/historial"
       ]
     }
   ],
